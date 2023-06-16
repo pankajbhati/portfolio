@@ -1,0 +1,30 @@
+.container-project {
+  width: 80%;
+  height: 100%;
+  margin-top: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-project {
+  width: 70%;
+  margin: 8rem auto;
+}
+
+.slick-prev {
+  left: -40px !important;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+  font-size: 25px;
+  color: black !important;
+}
+
+.slick-prev,
+.slick-next
+{
+    width: 35px;
+    height: 35px;
+}

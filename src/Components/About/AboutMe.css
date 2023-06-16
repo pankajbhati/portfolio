@@ -1,0 +1,100 @@
+.container-about {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #FDFCFC;
+}
+
+.container-left {
+    flex: 3;
+    height: 89vh;
+}
+
+.container-right {
+    flex: 3;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-right-1 {
+width: 100%;
+display: flex;
+flex: 1;
+}
+
+.container-right-2 {
+width: 100%;
+display: flex;
+flex: 1;
+}
+
+.heading-about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.name-heading {
+    font-family: 'Droid Serif,Georgia,serif0';
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.name-title {
+    font-family: 'Droid Serif,Georgia,serif0';
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.image-attributes {
+    height: 80%;
+    width: 55%;
+    border-radius: 10%;
+}
+
+.contact-button {
+    max-width: 180px;
+    margin-top: 2.5rem !important;
+    width: 8rem;
+}
+
+.about-overview {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.name-character {
+    font-size: 7rem;
+    transition: all 0.3s ease-in-out;
+    font-family: 'DroidSerif_Bold700_Italic';
+}
+
+.name-character:hover {
+    animation: dancing-animation 1s infinite;
+    transform-origin: center;
+}
+
+@keyframes dancing-animation {
+    0% {
+        transform: matrix(1,0,0,1,0,0);
+      }
+      50% {
+        transform: matrix(1.3,0,0,1.3,0,0);
+      }
+      100% {
+        transform: matrix(1,0,0,1,0,0);
+      }
+}
