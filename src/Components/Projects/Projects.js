@@ -1,71 +1,57 @@
-import React, {useState} from 'react';
-import Slider from 'react-slick';
-import CardComponent from './CardComponent';
-import {FaArrowRight, FaArrowLeft} from 'react-icons/fa';
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import { Typography } from "@mui/material";
+import CardComponent from "./CardComponent";
 
-// images
-import IndusValleyPartners from '../../assets/Indus_Valley_Partners.png'
-import SuccessNumber from "../../assets/Success_Numbers.jpg";
-import PankajBhati from '../../assets/pankaj_bhati.jpg';
-import ImmanentSolutions from '../../assets/Immanent_Solutions.jpg';
-
-// css files
-import './Projects.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-const images = [IndusValleyPartners, SuccessNumber, PankajBhati, ImmanentSolutions];
+// assets and css files
+import "./Projects.css";
+import main from "../../data.json";
 
 const Projects = () => {
+  const [index, setIndex] = useState(0);
 
-    const NextArrow = ({onClick}) => {
-        return (
-            <div className='arrow next' onClick={onClick}>
-                <FaArrowRight style={{color: "black", fontSize: "30px"}} />
-            </div>
-        )
-    }
+  const arr = ["item 1", "Item 2", "Item 3"];
+  const projects = main.projects;
 
-    const PrevArrow = ({onClick}) => {
-        return (
-            <div className='arrow prev' onClick={onClick}>
-                <FaArrowLeft style={{color: "black", fontSize: "30px"}} />
-            </div>
-        )
-    }
+  const handleButtonClick = (index) => {
+    console.log("index ", index);
+    console.log(main);
 
-    const Settings = {
-        dots: true,
-        infinite: true,
-        lazyLoad: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: 0,
-        NextArrow: <NextArrow style={{color: "black", fontSize: "30px"}} />,
-        PrevArrow: <PrevArrow />,
-    };
+    setIndex(index);
+  };
 
-    return (
-        <>
-        <div className='container-project'>
-            <div>Projects</div>
-            <div className='slider-project'>
-                <Slider {...Settings}>
-                    {images.map((img, index) => {
-                        return(
-                            <div>
-                            {/* <img src={images[index]} style={{height: 400, width: 400}} alt="Image" /> */}
-                            <CardComponent />
-                            </div>
-                        )
-                    })}
-                </Slider>
-            </div>
-        </div>
-        </>
-    )
+  return (
+    <>
+      <Box className="project-container">
+        <Box className="project-heading-container">
+          <Typography className="project-heading">Projects</Typography>
+        </Box>
+        <Box className="project-main-container">
+          <Box className="project-content">
+            <Box className="project-tab-container">
+              {arr.map((item, index) => {
+                return (
+                  <Box
+                    className="project-tab"
+                    key={index}
+                    index={index}
+                    onClick={() => handleButtonClick(index)}
+                  >
+                    <Typography className="project-tab-content">
+                      {item}
+                    </Typography>
+                  </Box>
+                );
+              })}
+            </Box>
+            <Box className="project-data-container">
+              <CardComponent project={projects[index]} />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </>
+  );
 };
 
 export default Projects;
