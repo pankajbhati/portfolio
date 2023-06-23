@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Icon from "@mui/material/Icon";
 
 // css and asset files
-import BackgroundImage from "../../assets/ContactBackground.png";
+// import BackgroundImage from "../../assets/ContactBackground.png";
 import "./ContactMe.css";
 
 const ContactMe = () => {

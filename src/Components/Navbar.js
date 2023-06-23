@@ -16,7 +16,7 @@ import {Link} from 'react-router-dom';
 
 // assets and css
 import './navbar.css';
-import ProfilePhoto from '../assets/pankaj_bhati.jpg';
+// import ProfilePhoto from '../assets/pankaj_bhati.jpg';
 
 const pages = ['Experience', 'Education', 'Projects', 'Contact'];
 
@@ -128,7 +128,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0, display: {xs: 'none', md: 'flex'} }}>
             <Tooltip title="Pankaj Bhati">
               <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Pankaj Bhati" src={ProfilePhoto} />
+                <Avatar alt="Pankaj Bhati" src={"/assets/pankaj_bhati.jpg"} />
               </IconButton>
             </Tooltip>
           </Box>

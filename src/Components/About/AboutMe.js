@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 // images and css
-import pankajBhati from "../../assets/pankaj_bhati.jpg";
-import AboutIllustration from "../../assets/AboutBackground.png";
+// import pankajBhati from "../../assets/pankaj_bhati.jpg";
+// import AboutIllustration from "/";
 import "./AboutMe.css";
 
 const AboutMe = () => {
@@ -16,13 +16,13 @@ const AboutMe = () => {
         <Grid container>
           <Grid item xs={12} md={6} sx={{display: {md: "none", xs: "flex"}}}>
             <div className="container-about">
-              <img src={AboutIllustration} className="container-about" />
+              <img src={"/assets/AboutBackground.png"} className="container-about" />
             </div>
           
           </Grid>
           <Grid item xs={12} md={6} sx={{display: {md: "flex", xs: "none"}}}>
             <div className="container-about">
-              <img src={AboutIllustration} className="container-about" />
+              <img src={"/assets/AboutBackground.png"} className="container-about" />
             </div>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -35,7 +35,7 @@ const AboutMe = () => {
               </div>
             </Box>
             <Box className="image-container" sx={{display: {xs: "none", md: "flex"}}}>
-              <img src={pankajBhati} className="image-attributes" />
+              <img src={"/assets/pankaj_bhati.jpg"} className="image-attributes" />
             </Box>
           </div>
           <div className="container-right-2">

@@ -6,12 +6,12 @@ import {
 import Box from "@mui/material/Box";
 
 // images
-import IndusValleyPartners from "../../assets/Indus_Valley_Partners.png";
-import ImmanentSolutions from "../../assets/Immanent_Solutions.jpg";
-import SuccessNumbers from "../../assets/Success_Numbers.jpg";
-import HourGlass from "../../assets/hour_glass.jpg";
-import ExperienceIll from "../../assets/ExperienceIll.png";
-import ExperienceTop from "../../assets/ExperienceTop.png";
+// import IndusValleyPartners from "../../assets/Indus_Valley_Partners.png";
+// import ImmanentSolutions from "../../assets/Immanent_Solutions.jpg";
+// import SuccessNumbers from "../../assets/Success_Numbers.jpg";
+// import HourGlass from "../../assets/hour_glass.jpg";
+// import ExperienceIll from "../../assets/ExperienceIll.png";
+// import ExperienceTop from "../../assets/ExperienceTop.png";
 
 // css files
 import "react-vertical-timeline-component/style.min.css";
@@ -31,10 +31,10 @@ const Experience = () => {
         // }}
       >
         <Box sx={{ display: {xs: "none", md: "flex"} ,position: "fixed", bottom: "0px"}}>
-          <img src={ExperienceIll} style={{height: "22rem", width: "22rem"}} />
+          <img src={"/assets/ExperienceIll.png"} style={{height: "22rem", width: "22rem"}} />
         </Box>
         <Box sx={{ display: {xs: "none", md: "flex"} ,position: "fixed", top: "12vh", right: "20px"}}>
-          <img src={ExperienceTop} style={{height: "20rem", width: "22rem"}} />
+          <img src={"/assets/ExperienceTop.png"} style={{height: "20rem", width: "22rem"}} />
         </Box>
         <div className="container-heading">Experience</div>
         <div className="container-content">
@@ -59,7 +59,7 @@ const Experience = () => {
                     marginLeft: "-1.6rem",
                     marginTop: "-1.6rem",
                   }}
-                  src={IndusValleyPartners}
+                  src={"/assets/Indus_Valley_Partners.png"}
                 />
               }
             >
@@ -122,7 +122,7 @@ const Experience = () => {
                     marginLeft: "-1.6rem",
                     marginTop: "-1.6rem",
                   }}
-                  src={ImmanentSolutions}
+                  src={"/assets/Immanent_Solutions.jpg"}
                 />
               }
             >
@@ -164,7 +164,7 @@ const Experience = () => {
                     marginLeft: "-1.6rem",
                     marginTop: "-1.6rem",
                   }}
-                  src={SuccessNumbers}
+                  src={"/assets/Success_Numbers.jpg"}
                 />
               }
             >
@@ -196,7 +196,7 @@ const Experience = () => {
                     marginLeft: "-1.6rem",
                     marginTop: "-1.6rem",
                   }}
-                  src={HourGlass}
+                  src={"/assets/hour_glass.jpg"}
                 />
               }
             />

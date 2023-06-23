@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
 // assets and css files
-import DTU from "../../assets/DTU2.jpg";
+// import DTU from "../../assets/DTU2.jpg";
 import "./Education.css";
 
 const Education = () => {
@@ -33,7 +33,7 @@ const Education = () => {
             >
               <img
                 className="dtu-image"
-                src={DTU}
+                src={"/assets/DTU2.jpg"}
                 alt="Delhi Technological University"
               />
               {/* <Box>
@@ -51,7 +51,7 @@ const Education = () => {
             >
               <img
                 className="dtu-image"
-                src={DTU}
+                src={"/assets/DTU2.jpg"}
                 alt="Delhi Technological University"
               />
               {/* <Box>
