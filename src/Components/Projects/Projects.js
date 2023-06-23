@@ -8,7 +8,7 @@ import "./Projects.css";
 import main from "../../data.json";
 
 const Projects = () => {
-  const [index, setIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
 
   const arr = ["item 1", "Item 2", "Item 3"];
   const projects = main.projects;
@@ -17,7 +17,7 @@ const Projects = () => {
     console.log("index ", index);
     console.log(main);
 
-    setIndex(index);
+    setTabIndex(index);
   };
 
   return (
@@ -32,7 +32,7 @@ const Projects = () => {
               {arr.map((item, index) => {
                 return (
                   <Box
-                    className="project-tab"
+                    className={tabIndex == index ? "project-active-tab" : "project-tab"}
                     key={index}
                     index={index}
                     onClick={() => handleButtonClick(index)}
@@ -45,7 +45,7 @@ const Projects = () => {
               })}
             </Box>
             <Box className="project-data-container">
-              <CardComponent project={projects[index]} />
+              <CardComponent project={projects[tabIndex]} />
             </Box>
           </Box>
         </Box>

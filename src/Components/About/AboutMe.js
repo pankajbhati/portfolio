@@ -24,14 +24,6 @@ const AboutMe = () => {
             <div className="container-about">
               <img src={AboutIllustration} className="container-about" />
             </div>
-          {/* <div
-          className="container-about"
-          style={{
-          backgroundImage: `url(${BackgroundImage})`,
-          backgroundPosition: "left",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}></div> */}
           </Grid>
           <Grid item xs={12} md={6}>
           <div className="container-right">
