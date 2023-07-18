@@ -23,42 +23,56 @@ const ContactMe = () => {
       >
         <Box className="contact-chat-container">
           <Box className="contact-chat-heading-container">
-            <Box className="contact-chat-heading">Love to hear from you,</Box>
-            <Box className="contact-chat-heading">Get in touch</Box>
+            <Box className="con-chat-container">
+              <Box className="contact-chat-heading">Love to hear from you,</Box>
+              <Box className="contact-chat-heading">Get in touch</Box>
+            </Box>
+            <Box className="contact-chat-icon">Icons</Box>
           </Box>
 
-          <Grid container>
+          <Grid container className="contact-grid-container">
             <Grid item xs={12} md={6}>
               <Box className="contact-grid-item">
-                <Typography className="contact-grid-item-text">Your name</Typography>
+                <Box className="contact-grid-item-text">Your name</Box>
                 <Input placeholder="Full Name"></Input>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box className="contact-grid-item">
-                <Typography>Your Email</Typography>
+                <Box className="contact-grid-item-text">Your Email</Box>
                 <Input placeholder="Full Name"></Input>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box className="contact-grid-item">
-                <Typography>What are you interested in?</Typography>
+                <Box className="contact-grid-item-text">
+                  What are you interested in?
+                </Box>
                 <Input placeholder="Full Name"></Input>
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Box className="contact-grid-item"> 
-                <Typography>Contact Number</Typography>
+              <Box className="contact-grid-item">
+                <Box className="contact-grid-item-text">Contact Number</Box>
                 <Input placeholder="Full Name"></Input>
               </Box>
             </Grid>
           </Grid>
-          <Box>
-            <Box>Message</Box>
+          <Box className="contact-grid-item">
+            <Box className="contact-grid-item-text">Message</Box>
             <Input placeholder="Let me know about your project"></Input>
           </Box>
           <Box>
-            <Button sx={{width: "30%", backgroundColor: "rgb(33, 150, 243)", color: "white", marginTop: "2rem"}}>Just Send</Button>
+            <Button
+              sx={{
+                width: "30%",
+                backgroundColor: "rgb(33, 150, 243)",
+                color: "white",
+                marginTop: "2rem",
+              }}
+            >
+              Just Send
+            </Button>
           </Box>
         </Box>
       </Box>
