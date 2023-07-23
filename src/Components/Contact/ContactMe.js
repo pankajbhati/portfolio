@@ -1,79 +1,125 @@
-import React from "react";
-import { Box, Button, Grid, Input, Typography } from "@mui/material";
+import React, {useState} from "react";
+import {
+  Box,
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  Divider,
+} from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import TelegramIcon from "@mui/icons-material/Telegram";
 import Icon from "@mui/material/Icon";
 
 // css and asset files
-// import BackgroundImage from "../../assets/ContactBackground.png";
 import "./ContactMe.css";
 
 const ContactMe = () => {
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("")
+
+  const handleOnChange = () => {
+    console.log("inside handle on change");
+  }
+
   return (
     <>
-      <Box
-        className="contact-container"
-        // sx={{
-        //   backgroundImage: `url(${BackgroundImage})`,
-        //   backgroundPosition: "center",
-        //   backgroundSize: "cover",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      >
-        <Box className="contact-chat-container">
-          <Box className="contact-chat-heading-container">
-            <Box className="con-chat-container">
-              <Box className="contact-chat-heading">Love to hear from you,</Box>
-              <Box className="contact-chat-heading">Get in touch</Box>
-            </Box>
-            <Box className="contact-chat-icon">Icons</Box>
-          </Box>
-
-          <Grid container className="contact-grid-container">
-            <Grid item xs={12} md={6}>
-              <Box className="contact-grid-item">
-                <Box className="contact-grid-item-text">Your name</Box>
-                <Input placeholder="Full Name"></Input>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className="contact-grid-item">
-                <Box className="contact-grid-item-text">Your Email</Box>
-                <Input placeholder="Full Name"></Input>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className="contact-grid-item">
-                <Box className="contact-grid-item-text">
-                  What are you interested in?
+      <Box className="contact-container" sx={{width: {xs: "96vw", md:"100vw"}}}>
+        <Box className="contact-inner-container" sx={{width: {xs: "80%", md: "60%"}, height: {md:"70%"}}}>
+          <Grid container className="contact-grid">
+            <Grid item xs={12} lg={4} className="contact-grid-item">
+              <Box className="contact-heading-container">
+                <Box className="contact-chat-heading">
+                  <Box className="contact-heading">Let's Chat</Box>
+                  <Box className="contact-heading">
+                    Tell me about your project
+                  </Box>
+                  <Box className="contact-sub-heading">
+                    Let's create something together
+                    <TelegramIcon sx={{ color: "#0553f0" }} />
+                  </Box>
                 </Box>
-                <Input placeholder="Full Name"></Input>
+                <Box className="contact-icon-container">
+                  <Box className="contact-social-icon">
+                    <Box className="contact-icon">
+                      <a
+                        href="https://github.com/pankajbhati"
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        <GitHubIcon sx={{ fontSize: "3rem" }} />
+                      </a>
+                    </Box>
+                    <Box className="contact-icon-text">
+                      <a
+                        href="https://github.com/pankajbhati"
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        Visit my Github Profile
+                      </a>
+                    </Box>
+                  </Box>
+                  <Box className="contact-social-icon">
+                    <Box className="contact-icon">
+                      <a
+                        href="https://www.linkedin.com/in/pankaj-bhati-dtu/"
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        <LinkedInIcon
+                          sx={{ fontSize: "3rem", color: "rgb(10,102,194)" }}
+                        />
+                      </a>
+                    </Box>
+                    <Box className="contact-icon-text">
+                      <a
+                        href="https://www.linkedin.com/in/pankaj-bhati-dtu/"
+                        style={{ textDecoration: "none", color: "black" }}
+                      >
+                        Message me on LinkedIn
+                      </a>
+                    </Box>
+                  </Box>
+                </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6}>
-              <Box className="contact-grid-item">
-                <Box className="contact-grid-item-text">Contact Number</Box>
-                <Input placeholder="Full Name"></Input>
+            <Grid item xs={12} lg={8} className="contact-grid-item">
+              {" "}
+              <Box className="contact-form-container">
+                <TextField
+                  id="full-name-text-field"
+                  label="Full Name"
+                  variant="outlined"
+                  className="contact-form-fields"
+                />
+                <TextField
+                  id="email-text-field"
+                  label="Email Address"
+                  variant="outlined"
+                  className="contact-form-fields"
+                />
+                <TextField
+                  id="subject-text-field"
+                  label="Subject"
+                  variant="outlined"
+                  className="contact-form-fields"
+                />
+                <TextField
+                  id="message-text-field"
+                  label="Your Message"
+                  variant="outlined"
+                  multiline
+                  rows={5}
+                  className="contact-form-fields"
+                />
+                <Box className="contact-form-button">
+                  <Button variant="contained">Send Message!</Button>
+                </Box>
               </Box>
             </Grid>
           </Grid>
-          <Box className="contact-grid-item">
-            <Box className="contact-grid-item-text">Message</Box>
-            <Input placeholder="Let me know about your project"></Input>
-          </Box>
-          <Box>
-            <Button
-              sx={{
-                width: "30%",
-                backgroundColor: "rgb(33, 150, 243)",
-                color: "white",
-                marginTop: "2rem",
-              }}
-            >
-              Just Send
-            </Button>
-          </Box>
         </Box>
       </Box>
     </>

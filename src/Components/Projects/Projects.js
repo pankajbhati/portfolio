@@ -84,29 +84,6 @@ const Projects = () => {
           }
         </Grid>
         </Box>
-        {/* <Box className="project-main-container">
-          <Box className="project-content">
-            <Box className="project-tab-container">
-              {arr.map((item, index) => {
-                return (
-                  <Box
-                    className={tabIndex == index ? "project-active-tab" : "project-tab"}
-                    key={index}
-                    index={index}
-                    onClick={() => handleButtonClick(index)}
-                  >
-                    <Typography className="project-tab-content">
-                      {item}
-                    </Typography>
-                  </Box>
-                );
-              })}
-            </Box>
-            <Box className="project-data-container">
-              <CardComponent project={projects[tabIndex]} />
-            </Box>
-          </Box>
-        </Box> */}
       </Box>
     </>
   );
