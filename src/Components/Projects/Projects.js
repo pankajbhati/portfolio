@@ -34,7 +34,7 @@ const Projects = () => {
               skills.map((item, skillIndex) => {
                 return(
                   <>
-                  <Grid item className="project-skills-item" xs={3} md={1.5} spacing={1}>
+                  <Grid item className="project-skills-item" xs={3} md={1.5}>
                     <Box className="project-skill-image">
                     <img style={{width: "5rem", height: "5rem"}} title={item.name} src={item.image} />
                     </Box>

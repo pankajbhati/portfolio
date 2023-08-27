@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import {
   Box,
   Button,
@@ -10,7 +10,8 @@ import {
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import Icon from "@mui/material/Icon";
+import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 // css and asset files
 import "./ContactMe.css";
@@ -22,9 +23,44 @@ const ContactMe = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("")
 
-  const handleOnChange = () => {
+  const form = useRef();
+
+  const handleOnChange = (event, val) => {
     console.log("inside handle on change");
+    if(event.target.id == "email-text-field")
+      setEmail(event.target.value);
+    if(event.target.id == "full-name-text-field")
+      setFullName(event.target.value);
+    if(event.target.id == "subject-text-field")
+      setSubject(event.target.value);
+    if(event.target.id == "message-text-field")
+      setMessage(event.target.value);
   }
+
+  const sendEmail = (event) => {
+
+    // creating form from states
+
+    var data = {
+      service_id: process.env.REACT_APP_SERVICE_ID,
+      template_id: process.env.REACT_APP_TEMPLATE_ID,
+      user_id: process.env.REACT_APP_USER_ID,
+      template_params: {
+        'from_email': email,
+        'from_name': fullName,
+        'subject': subject,
+        'message': message
+      }
+    }
+
+    axios.post("https://api.emailjs.com/api/v1.0/email/send",data)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log("error string ", error)
+    })
+  };
 
   return (
     <>
@@ -93,18 +129,21 @@ const ContactMe = () => {
                   label="Full Name"
                   variant="outlined"
                   className="contact-form-fields"
+                  onChange={(event, val) => handleOnChange(event, val)}
                 />
                 <TextField
                   id="email-text-field"
                   label="Email Address"
                   variant="outlined"
                   className="contact-form-fields"
+                  onChange={(event, val) => handleOnChange(event, val)}
                 />
                 <TextField
                   id="subject-text-field"
                   label="Subject"
                   variant="outlined"
                   className="contact-form-fields"
+                  onChange={(event, val) => handleOnChange(event, val)}
                 />
                 <TextField
                   id="message-text-field"
@@ -113,9 +152,10 @@ const ContactMe = () => {
                   multiline
                   rows={5}
                   className="contact-form-fields"
+                  onChange={(event, val) => handleOnChange(event, val)}
                 />
                 <Box className="contact-form-button">
-                  <Button variant="contained">Send Message!</Button>
+                  <Button variant="contained" onClick={(event) => sendEmail(event)}>Send Message!</Button>
                 </Box>
               </Box>
             </Grid>

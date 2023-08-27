@@ -41,18 +41,14 @@ const AboutMe = () => {
           <div className="container-right-2">
             <Box className="about-overview" sx={{paddingTop: {xs: "0px"}, padding: "5rem"}}>
               <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular
-              during the Renaissance. The first line of Lorem Ipsum, "Lorem
-              ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              Hi I am a full-stack developer currently based out of Noida (U.P). I am an under-graduate in
+              Computer Engineering from Delhi Technological University (formerly known as Delhi College of Engineering).
+              I graduated with 8.14 CGPA from my college (2017-2021) and started working with Indus Valley Partners
+              after my college. I have two years of professional development experience. During my time at DTU I was 
+              fascinated by emerging web technologies in the field of computers and started learning React and other
+              frameworks. After a while I found it more interesting than ever and then worked in different technologies
+              with Indus Valley Partners. I am passionate about creating beautiful and functional websites and application.
+              I am constantly pushing myself to learn and grow as a developer.
               </p>
               <Button variant="contained" className="contact-button">Contact Me</Button>
             </Box>
