@@ -64,7 +64,7 @@ const ContactMe = () => {
 
   return (
     <>
-      <Box className="contact-container" sx={{width: {xs: "96vw", md:"100vw"}}}>
+      <Box className="contact-container" sx={{width: {xs: "96vw", md:"100vw"}, backgroundImage: `url(${"assets/ContactBackground.png"})`}}>
         <Box className="contact-inner-container" sx={{width: {xs: "80%", md: "60%"}, height: {md:"70%"}}}>
           <Grid container className="contact-grid">
             <Grid item xs={12} lg={4} className="contact-grid-item">

@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
 // assets and css files
-// import DTU from "../../assets/DTU2.jpg";
 import "./Education.css";
 
 const Education = () => {
@@ -12,12 +11,10 @@ const Education = () => {
     <>
       <div
         className="container-education"
-        // style={{
-        //   backgroundImage: `url(${BackgroundImage})`,
-        //   backgroundPosition: "center",
-        //   backgroundSize: "contain",
-        //   backgroundRepeat: "no-repeat",
-        // }}
+        style={{
+          backgroundImage: `url(${"/assets/EducationBackground.png"})`,
+          backgroundPosition: "center"
+        }}
       >
         <div className="education-heading">Education</div>
         <div className="education-content-container">

@@ -21,10 +21,14 @@ const Projects = () => {
 
     setTabIndex(index);
   };
-
+ 
   return (
     <>
-      <Box className="project-container">
+      <Box className="project-container" 
+         style={{
+           backgroundImage: `url(${"/assets/ProjectBackground.png"})`,
+           backgroundPosition: "center",
+         }}>
         <Box className="skill-heading-container">
           <Typography className="skill-heading">Skills</Typography>
         </Box>

@@ -12,7 +12,8 @@
     border: 1px solid #bdbfbe;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 8px 6px #bdbfbe;
+    box-shadow: 2px 0px 8px 3px #bdbfbe;
+    background-color: white;
 }
 
 .contact-grid {
