@@ -79,8 +79,8 @@ const ContactMe = () => {
                     <TelegramIcon sx={{ color: "#0553f0" }} />
                   </Box>
                 </Box>
-                <Box className="contact-icon-container">
-                  <Box className="contact-social-icon">
+                <Box className="contact-icon-container" sx={{flexDirection: {xs: "row", md: "column"}, paddingTop: {xs: "1rem", md: "0rem"}}}>
+                  <Box className="contact-social-icon" sx={{marginRight: {xs: "1rem", md: "0rem"}, width: {xs: "20%", md: "80%"}}}>
                     <Box className="contact-icon">
                       <a
                         href="https://github.com/pankajbhati"
@@ -89,7 +89,7 @@ const ContactMe = () => {
                         <GitHubIcon sx={{ fontSize: "3rem" }} />
                       </a>
                     </Box>
-                    <Box className="contact-icon-text">
+                    <Box className="contact-icon-text" sx={{display: {xs: "none", md: "flex"}}}>
                       <a
                         href="https://github.com/pankajbhati"
                         style={{ textDecoration: "none", color: "black" }}
@@ -98,7 +98,7 @@ const ContactMe = () => {
                       </a>
                     </Box>
                   </Box>
-                  <Box className="contact-social-icon">
+                  <Box className="contact-social-icon" sx={{marginRight: {xs: "1rem", md: "0rem"}, width: {xs: "20%", md: "80%"}}}>
                     <Box className="contact-icon">
                       <a
                         href="https://www.linkedin.com/in/pankaj-bhati-dtu/"
@@ -109,7 +109,7 @@ const ContactMe = () => {
                         />
                       </a>
                     </Box>
-                    <Box className="contact-icon-text">
+                    <Box className="contact-icon-text" sx={{display: {xs: "none", md: "flex"}}}>
                       <a
                         href="https://www.linkedin.com/in/pankaj-bhati-dtu/"
                         style={{ textDecoration: "none", color: "black" }}
