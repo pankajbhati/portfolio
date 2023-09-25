@@ -35,7 +35,8 @@ flex: 1;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    padding-bottom: 5rem;
 }
 
 .image-container {
@@ -45,14 +46,14 @@ flex: 1;
 }
 .name-heading {
     font-family: 'Droid Serif,Georgia,serif0';
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
     letter-spacing: -2px;
 }
 
 .name-title {
     font-family: 'Droid Serif,Georgia,serif0';
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
     letter-spacing: -1px;
@@ -68,6 +69,7 @@ flex: 1;
     max-width: 180px;
     margin-top: 2.5rem !important;
     width: 8rem;
+    background-color: #62a5d9 !important;
 }
 
 .about-overview {
@@ -97,4 +99,17 @@ flex: 1;
       100% {
         transform: matrix(1,0,0,1,0,0);
       }
+}
+
+.about-text-container {
+    font-family: 'DroidSerif_Bold700_Italic';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.about-button-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }

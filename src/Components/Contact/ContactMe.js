@@ -64,12 +64,15 @@ const ContactMe = () => {
 
   return (
     <>
-      <Box className="contact-container" sx={{width: {xs: "96vw", md:"100vw"}, backgroundImage: `url(${"assets/ContactBackground.png"})`}}>
+      <Box className="contact-container" sx={{width: {xs: "96vw", md:"100vw"}, backgroundImage: `url(${"assets/ContactBackground.png"})`, backgroundSize: "cover"}}>
         <Box className="contact-inner-container" sx={{width: {xs: "80%", md: "60%"}, height: {md:"70%"}}}>
           <Grid container className="contact-grid">
             <Grid item xs={12} lg={4} className="contact-grid-item">
               <Box className="contact-heading-container">
                 <Box className="contact-chat-heading">
+                  <Box className="contact-photo-container">
+                  <img src={"/assets/pankaj_bhati.jpg"} className="image-attributes" />
+                  </Box>
                   <Box className="contact-heading">Let's Chat</Box>
                   <Box className="contact-heading">
                     Tell me about your project

@@ -11,14 +11,13 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import {Link} from 'react-router-dom';
 
 // assets and css
 import './navbar.css';
 // import ProfilePhoto from '../assets/pankaj_bhati.jpg';
 
-const pages = ['Experience', 'Education', 'Projects', 'Contact'];
+const pages = ['Experience', 'Projects', 'Contact'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

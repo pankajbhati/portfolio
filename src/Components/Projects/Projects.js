@@ -26,8 +26,9 @@ const Projects = () => {
     <>
       <Box className="project-container" 
          style={{
-           backgroundImage: `url(${"/assets/ProjectBackground.png"})`,
+           //backgroundImage: `url(${"/assets/ProjectBackground.png"})`,
            backgroundPosition: "center",
+           backgroundSize: "cover"
          }}>
         <Box className="skill-heading-container">
           <Typography className="skill-heading">Skills</Typography>

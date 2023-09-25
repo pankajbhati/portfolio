@@ -29,7 +29,7 @@
 
 .contact-heading-container {
     width: 100%;
-    height: 80%;
+    height: 96%;
     flex: 1;
     flex-direction: column;
     display: flex;
@@ -37,6 +37,7 @@
     align-items: center;
     border-right: 1px solid #cfd1cf;
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .contact-form-container{
@@ -114,4 +115,19 @@
 .contact-form-button {
     width: 80%;
     padding: 1rem 0rem 0rem 0rem;
+}
+
+.image-attributes {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 5rem;
+}
+
+.contact-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
