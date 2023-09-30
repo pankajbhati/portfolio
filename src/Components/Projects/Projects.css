@@ -182,21 +182,21 @@
 }
 
 .project-item-heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   font-family: 'Droid Serif,Georgia,serif0';
   margin-bottom: 2rem;
 }
 
 .project-item-category {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: 'Droid Serif,Georgia,serif0';
   margin-bottom: 0.5rem;
 }
 
 .project-item-tech-stack {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: 'Droid Serif,Georgia,serif0';
   margin-bottom: 0.5rem;
@@ -208,6 +208,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .project-item-link {

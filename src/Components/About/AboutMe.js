@@ -44,7 +44,7 @@ const AboutMe = () => {
                 className="heading-about"
                 sx={{ alignItems: { xs: "center", md: "center" } }}
               >
-                <div className="name-heading">Pankaj Bhati</div>
+                <Box className="name-heading" sx={{fontSize: {xs: "4rem", md: "5rem"}}}>Pankaj Bhati</Box>
                 <div className="name-title">Software-Developer</div>
               </Box>
               {/* <Box className="image-container" sx={{display: {xs: "none", md: "flex"}}}>
